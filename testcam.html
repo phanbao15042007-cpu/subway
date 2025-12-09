@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>TEST CAMERA</h2>
+<video id="v" autoplay playsinline style="width:300px;"></video>
+
+<script>
+navigator.mediaDevices.getUserMedia({ video:true })
+  .then(s => document.getElementById('v').srcObject = s)
+  .catch(e => alert("Error: " + e.name + " - " + e.message));
+</script>
+
+</body>
+</html>
